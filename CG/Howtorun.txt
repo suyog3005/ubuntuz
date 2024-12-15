@@ -1,0 +1,10 @@
+g++ filename.cpp -lgraph -o abc
+
+./abc
+
+
+snow flake
+g++ filename.cpp -o filename -lsfml-graphics -lsfml-window -lsfml-system
+
+sun rise
+g++ filename.cpp -o filename -lGL -lGLEW -lglfw
