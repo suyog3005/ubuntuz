@@ -1,0 +1,31 @@
+#include <iostream>
+#include<vector>
+#include<map>
+#include<string>
+using namespace std;
+
+int main(){
+   
+    typedef map<string,int> mapType;
+    mapType mapobj;
+    mapobj.insert(pair<string,int>("Maharashtra", 43424222));
+    mapobj.insert(pair<string,int>("Goa", 1345444));
+    mapobj.insert(pair<string,int>("Uttar pradesh", 8674567562));
+    mapobj.insert(pair<string,int>("Gujarat", 97525652));
+   
+    mapType::iterator iter;
+    cout<<"\n population of state in india  \n";
+    cout<<"\n size of population "<<mapobj.size()<<"\n";
+    string state_name;
+    cout<<" \n enter the name of the state: ";
+    cin>> state_name;
+   
+    iter = mapobj.find(state_name);
+    if(iter!=mapobj.end() )
+       cout<<state_name<<"'s population is "<<iter->second;
+    else
+        cout<<"key is not mapobj"<<"\n";
+    mapobj.clear();
+   
+   
+}
